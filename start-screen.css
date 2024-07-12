@@ -1,8 +1,9 @@
 .startScreen {
 height:100vh;
-width: 100%;
-position: absolute;
-margin: 0;
 
-display: flex;
 }
+
+.startScreen img{
+    
+    width: 100%;
+    }
