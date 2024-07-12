@@ -4,6 +4,7 @@
 }
 
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -13,6 +14,7 @@ body {
     background-image: url(./img/desert.png);
     background-position: center;
     font-family: 'zabars', Arial, Helvetica, sans-serif;
+    
 }
 
 
