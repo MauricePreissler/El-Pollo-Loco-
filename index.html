@@ -23,23 +23,21 @@
    </head>
 <body onload="init()">
 
-    <div class="startScreen">
-        <img src="./img/9_intro_outro_screens/start/startscreen_1.png" alt="">
-
-        <button class="playGame"></button>
+    <div class="startScreen" id="startScreen">
+        <div onclick="startGame()" class="StartGameButton">
+            Start Game
+        </div>
 
     </div>
     
     
-    <div class="mainClass">
+    <div class="mainClass" id="mainClass">
         <h1>El Pollo Loco</h1>
     
 
         <canvas id="canvas" width="720" height="480">
         
         </canvas>
-
-        <img src="" alt="">
 
     </div>
     

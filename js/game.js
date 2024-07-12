@@ -7,11 +7,15 @@ function init() {
     
     canvas = document.getElementById('canvas');
     world = new World(canvas, keyboard);
-
-
+    document.getElementById('mainClass').classList.add('display-none');
 
    console.log('My Character is', world.character);
     
+}
+
+function startGame(){
+    document.getElementById('mainClass').classList.remove('display-none');
+    document.getElementById('startScreen').classList.add('display-none');
 }
 
 // // window.addEventListener("keydown", (e) => {
