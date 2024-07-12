@@ -2,20 +2,46 @@ let canvas;
 let world;
 let keyboard = new Keyboard();
 
+
+
 function init() {
     
     canvas = document.getElementById('canvas');
     world = new World(canvas, keyboard);
-    document.getElementById('mainClass').classList.add('display-none');
+    document.getElementById('fullscreen').classList.add('display-none');
 
    console.log('My Character is', world.character);
     
 }
 
 function startGame(){
-    document.getElementById('mainClass').classList.remove('display-none');
+    document.getElementById('fullscreen').classList.remove('display-none');
     document.getElementById('startScreen').classList.add('display-none');
 }
+
+function fullscreen() {
+    let fullscreen = document.getElementById('canvas');
+    enterFullscreen(fullscreen);
+}
+
+function enterFullscreen(element) {
+    if(element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if(element.msRequestFullscreen) {      // for IE11 (remove June 15, 2022)
+      element.msRequestFullscreen();
+    } else if(element.webkitRequestFullscreen) {  // iOS Safari
+      element.webkitRequestFullscreen();
+    }
+  }
+  function exitFullscreen() {
+    if(document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if(document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+  
+//   exitFullscreen();
 
 // // window.addEventListener("keydown", (e) => {
 // //     console.log(e);

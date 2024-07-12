@@ -17,6 +17,8 @@ constructor(canvas, keyboard) {
     this.run();
 }
 
+
+
     setWorld() {
         this.character.world = this;
     }
@@ -103,3 +105,4 @@ constructor(canvas, keyboard) {
         this.ctx.restore();
     }
 }
+

@@ -16,6 +16,11 @@ body {
     font-family: 'zabars', Arial, Helvetica, sans-serif;
     
 }
+.mainClass {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 h1 {
@@ -26,6 +31,10 @@ h1 {
 canvas {
     background-color: black;
     display: block;
+}
+
+.display-none{
+    display: none !important;
 }
 
 @media only screen and (max-width: 720px) {
@@ -40,6 +49,3 @@ canvas {
     }
 }
 
-.display-none{
-    display: none !important;
-}
