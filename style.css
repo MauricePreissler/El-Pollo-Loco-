@@ -52,8 +52,6 @@ canvas {
 .imgFullAndExit{
     height: 32px;
     width: 32px;
-    position: absolute;
-    bottom: 199px;
-    right: 525px;
+    
 }
 
