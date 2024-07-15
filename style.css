@@ -15,6 +15,7 @@ body {
     background-position: center;
     font-family: 'zabars', Arial, Helvetica, sans-serif;
     
+    
 }
 .mainClass {
     display: flex;
@@ -52,6 +53,10 @@ canvas {
 .imgFullAndExit{
     height: 32px;
     width: 32px;
-    
+    margin-top: -51px;
+}
+
+.imgFullAndExit:hover{
+    cursor: pointer;
 }
 

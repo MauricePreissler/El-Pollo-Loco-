@@ -23,6 +23,7 @@
     <script src="./js/game.js"></script>
    </head>
 <body onload="init()">
+    
 
     <div class="startScreen" id="startScreen">
         <div onclick="startGame()" class="StartGameButton">
@@ -32,6 +33,7 @@
     </div>
     
     
+    
     <div class="mainClass" id="fullscreen">
 
         <h1>El Pollo Loco</h1>
@@ -39,15 +41,11 @@
 
         <canvas id="canvas" width="720" height="480">
 
-
-            
         
         
         </canvas>
-        <img class="imgFullAndExit" src="./img/img-bigscreen/fullscreen1.svg" alt="">
+        <img onclick="fullscreen()" class="imgFullAndExit" src="./img/img-bigscreen/fullscreen1.svg" alt="">
     </div>
-    
-    
     
 </body>
 </html>

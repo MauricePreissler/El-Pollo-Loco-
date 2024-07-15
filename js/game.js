@@ -1,22 +1,18 @@
+let backgroundsound = new Audio('audio/background.mp3');
 let canvas;
 let world;
 let keyboard = new Keyboard();
 
-
-
 function init() {
-    
     canvas = document.getElementById('canvas');
     world = new World(canvas, keyboard);
-    document.getElementById('fullscreen').classList.add('display-none');
-
-   console.log('My Character is', world.character);
-    
+    document.getElementById('fullscreen').classList.add('display-none'); 
 }
 
 function startGame(){
     document.getElementById('fullscreen').classList.remove('display-none');
     document.getElementById('startScreen').classList.add('display-none');
+    backgroundsound.play(); 
 }
 
 function fullscreen() {

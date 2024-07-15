@@ -9,6 +9,10 @@ align-items: center;
 font-size: 64px;
 }
 
+.StartGameButton{
+    margin-bottom: 600px;
+}
+
 .StartGameButton:hover{
     cursor: pointer;
 }
