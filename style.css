@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
     background-image: url(./img/desert.png);
     background-position: center;
     font-family: 'zabars', Arial, Helvetica, sans-serif;

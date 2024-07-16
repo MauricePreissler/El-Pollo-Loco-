@@ -1,7 +1,7 @@
 class CollectBottles extends MovableObject {
     height = 70;
     width = 50;
-    y = 345;
+    y = 380;
     
     IMAGES_WALKING = [
         'img/6_salsa_bottle/1_salsa_bottle_on_ground.png',
