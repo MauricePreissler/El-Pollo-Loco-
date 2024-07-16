@@ -11,7 +11,8 @@ class World {
     StatusBarBottles = new StatusBarBottles();
     StatusBarCoins = new StatusBarCoins();
     StatusBarEndboss = new StatusBarEndboss();
-
+    CollectBottles = new CollectBottles();
+    CollectCoins = new CollectCoins ();
     throwableObjects = [];
 
 constructor(canvas, keyboard) {
@@ -73,6 +74,11 @@ constructor(canvas, keyboard) {
         this.addToMap(this.StatusBarBottles);
         this.addToMap(this.StatusBarEndboss);
         this.ctx.translate(this.camera_x, 0);
+
+        this.addToMap(this.CollectBottles);
+        this.addToMap(this.CollectCoins);
+
+        
 
 
         this.addToMap(this.character);
