@@ -1,5 +1,7 @@
 class World {
     character = new Character();
+    endboss = new Endboss();
+    throwableObject = new ThrowableObject();
     level = level1;
     canvas;
     ctx;
@@ -38,10 +40,17 @@ constructor(canvas, keyboard) {
     }
 
     checkCollisions() {
-        this.level.enemies.forEach ((enemy) => {
-            if(this.character.isColliding(enemy) ) {
-               this.character.hit();
-               this.statusBar.setPercentage(this.character.energy);
+        this.level.enemies.forEach((enemy) => {
+            if (this.character.isColliding(enemy)) {
+                this.character.hit();
+                this.statusBar.setPercentage(this.character.energy);
+            }
+        });
+    
+        this.throwableObjects.forEach((throwableObject) => {
+            if (throwableObject.isColliding(this.endboss)) {
+                this.endboss.hit();
+                console.log('Throwable Object hit the Endboss');
             }
         });
     }
