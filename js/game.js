@@ -1,4 +1,5 @@
 let backgroundsound = new Audio('audio/background.mp3');
+backgroundsound.volume = 0.1; // Lautstärke auf 10% setzen
 let canvas;
 let world;
 let keyboard = new Keyboard();
@@ -13,6 +14,10 @@ function startGame(){
     document.getElementById('fullscreen').classList.remove('display-none');
     document.getElementById('startScreen').classList.add('display-none');
     backgroundsound.play(); 
+    backgroundsound.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
 }
 
 function fullscreen() {
