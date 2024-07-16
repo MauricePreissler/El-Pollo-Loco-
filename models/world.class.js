@@ -70,7 +70,7 @@ constructor(canvas, keyboard) {
         this.addToMap(this.statusBar);
         this.addToMap(this.StatusBarCoins);
         this.addToMap(this.StatusBarBottles);
-        this.addToMap(this.StatusBarEndboss);
+        // this.addToMap(this.StatusBarEndboss);
         this.ctx.translate(this.camera_x, 0);
 
        

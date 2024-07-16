@@ -31,6 +31,7 @@ class StatusBarEndboss extends MovableObject {
         this.animate();
 
         super();
+<<<<<<< HEAD
                 this.loadImages(this.IMAGES);
                 this.x = 500;
                 this.y = 0;
@@ -46,6 +47,15 @@ class StatusBarEndboss extends MovableObject {
                         this.img = this.imageCache[path];
                 
                     }
+=======
+        this.loadImages(this.IMAGES);
+        this.x = 2600;
+        this.y = 0;
+        this.width = 200;
+        this.height = 60;
+        this.setPercentage(100);
+        
+>>>>>>> 59d0c6934ad8eb0ddd4d6934e1c94de04d2a042b
     }
 
     animate() {
