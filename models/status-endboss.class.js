@@ -1,11 +1,11 @@
-class StatusBar extends DrawableObject {
+class StatusBarEndboss extends DrawableObject {
     IMAGES = [
-        'img/7_statusbars/1_statusbar/2_statusbar_health/blue/0.png',
-        'img/7_statusbars/1_statusbar/2_statusbar_health/blue/20.png',
-        'img/7_statusbars/1_statusbar/2_statusbar_health/blue/40.png',
-        'img/7_statusbars/1_statusbar/2_statusbar_health/blue/60.png',
-        'img/7_statusbars/1_statusbar/2_statusbar_health/blue/80.png',
-        'img/7_statusbars/1_statusbar/2_statusbar_health/blue/100.png'
+        'img/7_statusbars/2_statusbar_endboss/orange/orange0.png',
+        'img/7_statusbars/2_statusbar_endboss/orange/orange20.png',
+        'img/7_statusbars/2_statusbar_endboss/orange/orange40.png',
+        'img/7_statusbars/2_statusbar_endboss/orange/orange60.png',
+        'img/7_statusbars/2_statusbar_endboss/orange/orange80.png',
+        'img/7_statusbars/2_statusbar_endboss/orange/orange100.png'
 
     ];
 
@@ -14,8 +14,8 @@ class StatusBar extends DrawableObject {
     constructor() {
         super();
         this.loadImages(this.IMAGES);
-        this.x = 20;
-        this.y = -7;
+        this.x = 500;
+        this.y = 0;
         this.width = 200;
         this.height = 60;
         this.setPercentage(100);
