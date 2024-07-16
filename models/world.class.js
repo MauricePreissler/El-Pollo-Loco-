@@ -53,8 +53,9 @@ constructor(canvas, keyboard) {
     
         this.throwableObjects.forEach((throwableObject) => {
             if (throwableObject.isColliding(this.endboss)) {
-                this.endboss.hit();
-                console.log('Throwable Object hit the Endboss');
+                this.endboss.attack();
+                this.StatusBarEndboss.setPercentage(this.endboss.energy);
+                console.log('Throwable Object hit the Endboss',this.endboss.energy);
             }
         });
     }
@@ -70,7 +71,7 @@ constructor(canvas, keyboard) {
         this.addToMap(this.statusBar);
         this.addToMap(this.StatusBarCoins);
         this.addToMap(this.StatusBarBottles);
-        // this.addToMap(this.StatusBarEndboss);
+        this.addToMap(this.StatusBarEndboss);
         this.ctx.translate(this.camera_x, 0);
 
 
