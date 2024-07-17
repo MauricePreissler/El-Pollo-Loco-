@@ -153,6 +153,7 @@ class Endboss extends MovableObject {
     world;
     isDeadAnimationComplete = false;
     alpha = 1; // Transparenzwert (1 = vollständig sichtbar, 0 = vollständig unsichtbar)
+    currentImage = 0;
 
     constructor() {
         super().loadImage('./img/4_enemie_boss_chicken/2_alert/G5.png');
@@ -171,11 +172,10 @@ class Endboss extends MovableObject {
                 } else {
                     this.fadeOut();
                 }
+            } else if (this.energy < 100) {
+                this.playAnimation(this.IMAGES_WALKING);
             } else {
                 this.playAnimation(this.IMAGES_ALERT);
-            }
-            if (this.energy < 100) {
-                this.playAnimation(this.IMAGES_WALKING);
             }
         }, 200);
         setInterval(() => {
