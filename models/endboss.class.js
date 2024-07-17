@@ -20,10 +20,12 @@ class Endboss extends MovableObject {
         'img/4_enemie_boss_chicken/5_dead/G26.png'
     ];
 
+    
+
     world;
 
     constructor() {
-        super().loadImage(this.IMAGES_WALKING[0]);
+        super().loadImage('./img/4_enemie_boss_chicken/2_alert/G5.png');
         this.loadImages(this.IMAGES_WALKING);
         this.loadImages(this.IMAGES_BOSS_DEAD);
         this.x = 2500;
