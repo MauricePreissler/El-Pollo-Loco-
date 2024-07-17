@@ -13,30 +13,41 @@ const level1 = new Level(
         new smallChicken(),
         new smallChicken(),
         new smallChicken(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectCoins(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
-        new CollectBottles(),
+       
+      
 ],
+
+[
+   
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectBottles(),
+    new CollectCoins(),
+    new CollectCoins(),
+    new CollectCoins(),
+    new CollectCoins(),
+    new CollectCoins(),
+    new CollectCoins(),
+    new CollectCoins(),
+    new CollectCoins(),
+    new CollectCoins(),
+    new CollectCoins(),
+    
+   
+  
+],
+
+
 [
     new cloud()
 ],

@@ -10,8 +10,9 @@ class CollectBottles extends MovableObject {
 	};
     
     IMAGES_WALKING = [
-        // 'img/6_salsa_bottle/1_salsa_bottle_on_ground.png',
-        'img/6_salsa_bottle/2_salsa_bottle_on_ground.png',
+        'img/6_salsa_bottle/1_salsa_bottle_on_ground.png'
+        
+        
        
     ];
 
@@ -19,10 +20,9 @@ class CollectBottles extends MovableObject {
         super().loadImage(this.IMAGES_WALKING[0]);
         this.loadImages(this.IMAGES_WALKING);
         // this.x = 300
-        this.x = 100 + Math.random() * 4 * 400; // Zufällige X-Position für die Flasche
-        this.y = 380; // Feste Y-Position für die Flasche
-    
-        this.animate();
+        this.x = 300 + Math.random() * 2000; // Zufällige X-Position für die Flasche
+        // this.y = 380; // Feste Y-Position für die Flasche
+        
     }
 
     animate() {
