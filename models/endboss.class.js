@@ -180,7 +180,11 @@ class Endboss extends MovableObject {
         }, 200);
         setInterval(() => {
             if (this.energy < 100) {
+                if (this.isDead()) {
+                    this.x -= 0
+                }else{
                 this.x -= this.speed
+            }
             }
         }, 1000 / 120);
     }
