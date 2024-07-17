@@ -101,7 +101,7 @@ constructor(canvas, keyboard) {
 
         
 
-
+        this.addToMap(this.endboss);
         this.addToMap(this.character);
         this.addObjectsToMap(this.level.enemies);
         this.addObjectsToMap(this.level.clouds);

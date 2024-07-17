@@ -36,8 +36,6 @@ const level1 = new Level(
         new CollectBottles(),
         new CollectBottles(),
         new CollectBottles(),
-        new Endboss(),
-        // new StatusBarEndboss()
 ],
 [
     new cloud()
