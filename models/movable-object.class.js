@@ -4,7 +4,10 @@ class MovableObject extends DrawableObject {
     speedY = 0;
     acceleration = 2.5;
     energy = 100;
+    bottles = 0;
+    coins = 0;
     lastHit = 0;
+    lastBottle = 100;
     
     applyGravity() {
         setInterval(() => {
@@ -51,6 +54,14 @@ class MovableObject extends DrawableObject {
         } else {
             this.lastHit = new Date().getTime();
         }
+    }
+    addBottles() {
+        this.bottles += 20;
+        if(this.bottles > 100){
+            this.bottles = 0;
+        } else {
+            this.lastBottle = new Date().getTime();
+        } 
     }
 
     isHurt () {

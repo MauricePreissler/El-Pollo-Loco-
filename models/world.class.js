@@ -53,7 +53,17 @@ constructor(canvas, keyboard) {
                 this.statusBar.setPercentage(this.character.energy);
             }
         });
-    
+        
+        this.level.friends.forEach((friend) => {
+            if (this.character.isColliding(friend)) {
+                this.character.addBottles();
+                this.StatusBarCoins.setPercentage(this.CollectCoins.bottles);
+                this.StatusBarBottles.setPercentage(this.CollectBottles.bottles);
+                console.log('hit the bottle',this.CollectBottles.bottles);
+            }
+        });
+       
+
         this.throwableObjects.forEach((throwableObject) => {
             if (throwableObject.isColliding(this.endboss)) {
                 this.endboss.attack();
@@ -61,6 +71,7 @@ constructor(canvas, keyboard) {
                 console.log('Throwable Object hit the Endboss',this.endboss.energy);
             }
         });
+        
     }
 
     draw() {
