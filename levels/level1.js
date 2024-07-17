@@ -13,7 +13,16 @@ const level1 = new Level(
         new smallChicken(),
         new smallChicken(),
         new smallChicken(),
-       
+        new CollectCoins(),
+        new CollectCoins(),
+        new CollectCoins(),
+        new CollectCoins(),
+        new CollectCoins(),
+        new CollectCoins(),
+        new CollectCoins(),
+        new CollectCoins(),
+        new CollectCoins(),
+        new CollectCoins(),
       
 ],
 
@@ -32,30 +41,9 @@ const level1 = new Level(
     new CollectBottles(),
     new CollectBottles(),
     new CollectBottles(),
-    
-    
    
   
 ],
-
-[
-   
-    
-    new CollectCoins(),
-    new CollectCoins(),
-    new CollectCoins(),
-    new CollectCoins(),
-    new CollectCoins(),
-    new CollectCoins(),
-    new CollectCoins(),
-    new CollectCoins(),
-    new CollectCoins(),
-    new CollectCoins(),
-    
-   
-  
-],
-
 
 
 [
