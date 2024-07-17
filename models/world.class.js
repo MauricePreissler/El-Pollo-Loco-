@@ -61,25 +61,6 @@ constructor(canvas, keyboard) {
                 console.log('Throwable Object hit the Endboss',this.endboss.energy);
             }
         });
-
-        this.collectedCoins.forEach((CollectCoins) => {
-            if (CollectCoins.isColliding(this.character)) {
-
-                //this.CollectCoins.takeMoney();//Funktion für Collect schreiben, wo die Coins gepusht werden
-                //this.StatusBarEndboss.setPercentage(this.endboss.energy);
-                console.log('Character touch Coin');
-            }
-        });
-        // this.throwableObjects.forEach((throwableObject) => {
-        //     if (throwableObject.isColliding(this.smallChicken)) {
-        //         this.smallChicken.attack();
-        //         this.StatusBarsmallChicken.setPercentage(this.smallChicken.energy);
-        //         console.log('Throwable Object hit the smallChicken',this.smallChicken.energy);
-        //     }
-        // });
-
-
-        
     }
 
     draw() {

@@ -1,5 +1,5 @@
-let backgroundsound = new Audio('audio/background.mp3');
-backgroundsound.volume = 0.1; // Lautstärke auf 10% setzen
+// let backgroundsound = new Audio('audio/background.mp3');
+// backgroundsound.volume = 0.1; // Lautstärke auf 10% setzen
 let canvas;
 let world;
 let keyboard = new Keyboard();
@@ -7,17 +7,18 @@ let keyboard = new Keyboard();
 function init() {
     canvas = document.getElementById('canvas');
     world = new World(canvas, keyboard);
-    document.getElementById('fullscreen').classList.add('display-none'); 
+    document.getElementById('fullscreen').classList.add('display-none');
+    document.getElementById('you-win').classList.add('display-none'); 
 }
 
 function startGame(){
     document.getElementById('fullscreen').classList.remove('display-none');
     document.getElementById('startScreen').classList.add('display-none');
-    backgroundsound.play(); 
-    backgroundsound.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
+    // backgroundsound.play(); 
+    // backgroundsound.addEventListener('ended', function() {
+    //     this.currentTime = 0;
+    //     this.play();
+    // }, false);
 }
 
 function fullscreen() {
