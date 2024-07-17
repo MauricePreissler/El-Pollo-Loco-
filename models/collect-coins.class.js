@@ -21,7 +21,7 @@ class CollectCoins extends MovableObject {
         this.loadImages(this.IMAGES_WALKING);
         // this.x = 400
         this.y = 160 + Math.random() * 100;
-        this.x = 500 + Math.random() * 3 * Math.random() * 600;
+        this.x = 700 + Math.random() * 3 * Math.random() * 600;
         this.animate();
 
             // super().loadImage(this.COIN_IMAGE[0]);
