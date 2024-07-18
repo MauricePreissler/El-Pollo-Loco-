@@ -11,6 +11,7 @@ function init() {
     world = new World(canvas, keyboard);
     document.getElementById('fullscreen').classList.add('display-none');
     document.getElementById('you-win').classList.add('display-none'); 
+    document.getElementById('you-lost').classList.add('display-none');
 }
 
 function startGame(){
@@ -63,12 +64,6 @@ function enterFullscreen(element) {
     }
   }
   
-//   exitFullscreen();
-
-// // window.addEventListener("keydown", (e) => {
-// //     console.log(e);
-// });
-
 window.addEventListener("keydown", (e) => {
     
     if (e.keyCode == 39) {

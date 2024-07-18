@@ -1,7 +1,12 @@
 
 class Chicken extends MovableObject {
+<<<<<<< HEAD
     //walking_sound = new Audio('./audio/enemyTalking.mp3');
     
+=======
+    // walking_sound = new Audio('./audio/enemyTalking.mp3');
+    //walking_sound.volume = 0.5; 
+>>>>>>> 30291a1d9a5f9db10a63c4b385911a67498f8699
     width = 80;
     height = 80;
     y = 350;
@@ -31,7 +36,11 @@ class Chicken extends MovableObject {
         }, 1000 / 60);
         setInterval(() => {
             this.playAnimation(this.IMAGES_CHICKEN_WALKING);
+<<<<<<< HEAD
             //this.walking_sound.play();
+=======
+            // this.walking_sound.play();
+>>>>>>> 30291a1d9a5f9db10a63c4b385911a67498f8699
         }, 200);
     }
 

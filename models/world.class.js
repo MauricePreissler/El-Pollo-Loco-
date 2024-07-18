@@ -12,7 +12,7 @@ class World {
     StatusBarCoins = new StatusBarCoins();
     StatusBarEndboss = new StatusBarEndboss();
     CollectBottles = new CollectBottles();
-    CollectCoins = new CollectCoins ();
+    // CollectCoins = new CollectCoins ();
     collectedCoins=[];
     collectedBottles=[];
     throwableObjects = [];
@@ -54,14 +54,14 @@ constructor(canvas, keyboard) {
             }
         });
         
-        this.level.friends.forEach((friend) => {
-            if (this.character.isColliding(friend)) {
-                this.character.addBottles();
-                this.StatusBarCoins.setPercentage(this.CollectCoins.bottles);
-                this.StatusBarBottles.setPercentage(this.CollectBottles.bottles);
-                console.log('hit the bottle',this.CollectBottles.bottles);
-            }
-        });
+        // this.level.friends.forEach((friend) => {
+        //     if (this.character.isColliding(friend)) {
+        //         this.character.addBottles();
+        //         this.StatusBarCoins.setPercentage(this.CollectCoins.bottles);
+        //         this.StatusBarBottles.setPercentage(this.CollectBottles.bottles);
+        //         console.log('hit the bottle',this.CollectBottles.bottles);
+        //     }
+        // });
        
 
         this.throwableObjects.forEach((throwableObject) => {
@@ -72,19 +72,17 @@ constructor(canvas, keyboard) {
             }
         });
 
-        // this.endboss.forEach((endboss) => {
-        //     if (this.character.isColliding(endboss)) {
-        //         // this.endboss.attack();
-        //         // this.StatusBarEndboss.setPercentage(this.endboss.energy);
-        //         console.log('Endboss hit the Charakter');
-        //     }
-        // });
-
         if (this.character.isColliding(this.endboss)) {
-            this.character. endbossAttackCharacter();  
+            this.character.endbossAttackCharacter();  
             this.statusBar.setPercentage(this.character.energy);
             console.log('Endboss hit the Charakter',this.character.energy);
         }
+
+        this.level.coins.forEach((coin) => {
+        if (this.character.isColliding(coin)) {
+            console.log('Charakter hit the Coins');
+        }
+    });
 
         
     }
@@ -104,7 +102,7 @@ constructor(canvas, keyboard) {
         this.ctx.translate(this.camera_x, 0);
 
         this.addToMap(this.CollectBottles);
-        this.addToMap(this.CollectCoins);
+        this.addObjectsToMap(this.level.coins);
 
         
 
