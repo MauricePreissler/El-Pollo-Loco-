@@ -54,16 +54,6 @@ constructor(canvas, keyboard) {
             }
         });
         
-        // this.level.friends.forEach((friend) => {
-        //     if (this.character.isColliding(friend)) {
-        //         this.character.addBottles();
-        //         this.StatusBarCoins.setPercentage(this.CollectCoins.bottles);
-        //         this.StatusBarBottles.setPercentage(this.CollectBottles.bottles);
-        //         console.log('hit the bottle',this.CollectBottles.bottles);
-        //     }
-        // });
-       
-
         this.throwableObjects.forEach((throwableObject) => {
             if (throwableObject.isColliding(this.endboss)) {
                 this.endboss.attack();
@@ -78,12 +68,16 @@ constructor(canvas, keyboard) {
             console.log('Endboss hit the Charakter',this.character.energy);
         }
 
-        this.level.coins.forEach((coin) => {
+    this.level.coins.forEach((coin) => {
         if (this.character.isColliding(coin)) {
-            console.log('Charakter hit the Coins');
+            console.log('Character hit the Coins');
+            this.collectedCoins.push(coin);
+            this.level.coins.splice(this.level.coins.indexOf(coin), 1); // Entfernt die Münze aus dem Level
+            this.StatusBarCoins.setPercentage(this.collectedCoins.length, 5); // Setze 5 als die Gesamtzahl der Münzen
         }
     });
 
+   
         
     }
 
