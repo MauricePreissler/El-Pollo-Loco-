@@ -9,6 +9,7 @@ let world;
 let keyboard = new Keyboard();
 
 function init() {
+    initLevel();
     canvas = document.getElementById('canvas');
     world = new World(canvas, keyboard);
     document.getElementById('fullscreen').classList.add('display-none');
@@ -17,11 +18,13 @@ function init() {
 }
 
 function startGame(){
+    init();
     document.getElementById('fullscreen').classList.remove('display-none');
     document.getElementById('startScreen').classList.add('display-none');
     backgroundsound.play(); 
     enemyTalking.play(); 
     smallChicken_sound.play();
+    
 
     backgroundsound.addEventListener('ended', function() {
         this.currentTime = 0;
