@@ -55,6 +55,16 @@ class MovableObject extends DrawableObject {
             this.lastHit = new Date().getTime();
         }
     }
+
+    endbossAttackCharacter() {
+        this.energy -= 100;
+        if(this.energy < 0){
+            this.energy = 0;
+        } else {
+            this.lastHit = new Date().getTime();
+        }
+    }
+
     addBottles() {
         this.bottles += 20;
         if(this.bottles > 100){

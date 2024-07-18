@@ -71,6 +71,21 @@ constructor(canvas, keyboard) {
                 console.log('Throwable Object hit the Endboss',this.endboss.energy);
             }
         });
+
+        // this.endboss.forEach((endboss) => {
+        //     if (this.character.isColliding(endboss)) {
+        //         // this.endboss.attack();
+        //         // this.StatusBarEndboss.setPercentage(this.endboss.energy);
+        //         console.log('Endboss hit the Charakter');
+        //     }
+        // });
+
+        if (this.character.isColliding(this.endboss)) {
+            this.character. endbossAttackCharacter();  
+            this.statusBar.setPercentage(this.character.energy);
+            console.log('Endboss hit the Charakter',this.character.energy);
+        }
+
         
     }
 
