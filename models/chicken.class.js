@@ -1,7 +1,7 @@
 
 class Chicken extends MovableObject {
-    walking_sound = new Audio('./audio/enemyTalking.mp3');
-    //walking_sound.volume = 0.5; 
+    //walking_sound = new Audio('./audio/enemyTalking.mp3');
+    
     width = 80;
     height = 80;
     y = 350;
@@ -31,7 +31,7 @@ class Chicken extends MovableObject {
         }, 1000 / 60);
         setInterval(() => {
             this.playAnimation(this.IMAGES_CHICKEN_WALKING);
-            this.walking_sound.play();
+            //this.walking_sound.play();
         }, 200);
     }
 

@@ -1,5 +1,7 @@
 let backgroundsound = new Audio('audio/background.mp3');
 backgroundsound.volume = 0.1; // Lautstärke auf 10% setzen
+let walking_sound = new Audio('./audio/enemyTalking.mp3');
+let smallChicken_sound = new Audio('./audio/smallEnemy.mp3');
 let canvas;
 let world;
 let keyboard = new Keyboard();
@@ -15,11 +17,29 @@ function startGame(){
     document.getElementById('fullscreen').classList.remove('display-none');
     document.getElementById('startScreen').classList.add('display-none');
     backgroundsound.play(); 
+    walking_sound.play();
+    smallChicken_sound.play();
+
+
+
     backgroundsound.addEventListener('ended', function() {
         this.currentTime = 0;
         this.play();
     }, false);
+
+    // walking_sound.addEventListener('ended', function() {
+    //     this.currentTime = 0;
+    //     this.play();
+    // }, false);
+
+    // smallChicken_sound.addEventListener('ended', function() {
+    //     this.currentTime = 0;
+    //     this.play();
+    // }, false);
+
 }
+
+
 
 function fullscreen() {
     let fullscreen = document.getElementById('canvas');
