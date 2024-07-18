@@ -11,7 +11,7 @@ class smallChicken extends MovableObject {
     IMAGES_SMALLCHICKEN_DEAD = [
         './img/3_enemies_chicken/chicken_small/2_dead/dead.png'
     ];
-    smallChicken_sound = new Audio('./audio/smallEnemy.mp3');
+    // smallChicken_sound = new Audio('./audio/smallEnemy.mp3');
     //smallChicken_sound.volume = 0.5;
 
 
@@ -31,7 +31,7 @@ class smallChicken extends MovableObject {
 
         setInterval(() => {
             this.playAnimation(this.IMAGES_SMALLCHICKEN_WALKING);
-            this.smallChicken_sound.play();
+            // this.smallChicken_sound.play();
         }, 200);
     }
 }
