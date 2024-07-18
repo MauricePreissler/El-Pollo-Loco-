@@ -9,12 +9,12 @@ let world;
 let keyboard = new Keyboard();
 
 function init() {
-    initLevel();
+    initLevel(); 
     canvas = document.getElementById('canvas');
     world = new World(canvas, keyboard);
     document.getElementById('fullscreen').classList.add('display-none');
     document.getElementById('you-win').classList.add('display-none'); 
-    document.getElementById('you-lost').classList.add('display-none');
+    document.getElementById('you-lost').classList.add('display-none');  
 }
 
 function startGame(){
@@ -24,6 +24,7 @@ function startGame(){
     backgroundsound.play(); 
     enemyTalking.play(); 
     smallChicken_sound.play();
+    
     
 
     backgroundsound.addEventListener('ended', function() {
