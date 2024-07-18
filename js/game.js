@@ -14,6 +14,7 @@ function init() {
     document.getElementById('fullscreen').classList.add('display-none');
     document.getElementById('you-win').classList.add('display-none'); 
     document.getElementById('you-lost').classList.add('display-none');
+    document.getElementById('open-info-bg').classList.add('display-none');
 }
 
 function startGame(){
@@ -49,6 +50,15 @@ function enterFullscreen(element) {
     } else if(document.webkitExitFullscreen) {
       document.webkitExitFullscreen();
     }
+  }
+
+  function openInfo(){
+    document.getElementById('open-info-bg').classList.remove('display-none');
+  }
+
+  function closeInfo(){
+    document.getElementById('open-info-bg').classList.add('display-none');
+    console.log("close")
   }
   
 window.addEventListener("keydown", (e) => {

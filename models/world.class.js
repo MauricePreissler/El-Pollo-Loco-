@@ -45,14 +45,31 @@ class World {
         }
     }
 
+    
+    
     checkCollisions() {
         this.level.enemies.forEach((enemy) => {
             if (this.character.isColliding(enemy)) {
-                this.character.hit();
-                this.statusBar.setPercentage(this.character.energy);
+                if (enemy instanceof Chicken) {
+                    if (enemy.isDead) {
+                        // Kein Schaden, wenn das Hähnchen tot ist
+                        return;
+                    }
+                    if (this.character.y + this.character.height <= enemy.y + enemy.height / 2) {
+                        // Der Charakter springt von oben auf das Hähnchen
+                        enemy.stopMovement(); // Stoppt die Bewegung des Hähnchens
+                        console.log('Character hit the Chicken from above');
+                    } else {
+                        this.character.hit(); // Der Charakter nimmt Schaden
+                        this.statusBar.setPercentage(this.character.energy); // Aktualisiert die Statusleiste
+                    }
+                } else {
+                    this.character.hit(); // Der Charakter nimmt Schaden
+                    this.statusBar.setPercentage(this.character.energy); // Aktualisiert die Statusleiste
+                }
             }
         });
-
+    
         this.throwableObjects.forEach((throwableObject) => {
             if (throwableObject.isColliding(this.endboss)) {
                 this.endboss.attack();
@@ -60,13 +77,13 @@ class World {
                 console.log('Throwable Object hit the Endboss', this.endboss.energy);
             }
         });
-
+    
         if (this.character.isColliding(this.endboss)) {
             this.character.endbossAttackCharacter();
             this.statusBar.setPercentage(this.character.energy);
-            console.log('Endboss hit the Charakter', this.character.energy);
+            console.log('Endboss hit the Character', this.character.energy);
         }
-
+    
         this.level.coins.forEach((coin) => {
             if (this.character.isColliding(coin)) {
                 console.log('Character hit the Coins');
@@ -75,7 +92,7 @@ class World {
                 this.StatusBarCoins.setPercentage(this.collectedCoins.length, 5); // Setze 5 als die Gesamtzahl der Münzen
             }
         });
-
+    
         this.level.bottles.forEach((bottle) => {
             if (this.character.isColliding(bottle) && this.collectedBottles.length < 5) {
                 console.log('Character hit the Bottles');
@@ -85,6 +102,7 @@ class World {
             }
         });
     }
+    
 
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -147,3 +165,5 @@ class World {
         this.ctx.restore();
     }
 }
+
+

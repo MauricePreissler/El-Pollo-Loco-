@@ -59,3 +59,35 @@ canvas {
     cursor: pointer;
 }
 
+
+
+
+.open-info-bg{
+    background: rgba(35, 36, 35, 0.3);
+    /* z-index: 1; */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-info{
+    background-color: beige;
+    width: 720px;
+    height: 480px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.back-image img{
+    height: 64px;
+}
+
+.back-image img:hover{
+    cursor: pointer;
+}
