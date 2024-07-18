@@ -108,8 +108,8 @@
 
 
 class Character extends MovableObject {
-    height = 280;
-    y = 55;
+    height = 180;
+    y = 255;
     speed = 10;
     opacity = 1; // Start with full opacity
     fadeOutSpeed = 0.02; // Speed of fading out
