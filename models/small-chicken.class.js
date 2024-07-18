@@ -11,13 +11,8 @@ class smallChicken extends MovableObject {
     IMAGES_SMALLCHICKEN_DEAD = [
         './img/3_enemies_chicken/chicken_small/2_dead/dead.png'
     ];
-<<<<<<< HEAD
-    //smallChicken_sound = new Audio('./audio/smallEnemy.mp3');
-
-=======
     // smallChicken_sound = new Audio('./audio/smallEnemy.mp3');
     //smallChicken_sound.volume = 0.5;
->>>>>>> 30291a1d9a5f9db10a63c4b385911a67498f8699
 
 
     
@@ -36,11 +31,7 @@ class smallChicken extends MovableObject {
 
         setInterval(() => {
             this.playAnimation(this.IMAGES_SMALLCHICKEN_WALKING);
-<<<<<<< HEAD
-            //this.smallChicken_sound.play();
-=======
             // this.smallChicken_sound.play();
->>>>>>> 30291a1d9a5f9db10a63c4b385911a67498f8699
         }, 200);
     }
 }
@@ -54,4 +45,3 @@ class smallChicken extends MovableObject {
 //         }
 //     }, 200);
 //  }
-

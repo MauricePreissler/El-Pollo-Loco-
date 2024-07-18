@@ -44,8 +44,6 @@
 // }
 
 class Endboss extends MovableObject {
-    endboss_sound = new Audio('./audio/EndbossStart.mp3');
-    endboss_dead = new Audio('./audio/EndbossAttack.mp3');
     height = 400;
     width = 300;
     speed = 0.60;
@@ -90,21 +88,17 @@ class Endboss extends MovableObject {
     }
 
     animate() {
-        
         setInterval(() => {
             if (this.isDead()) {
                 if (!this.isDeadAnimationComplete) {
                     this.playAnimation(this.IMAGES_BOSS_DEAD);
-                    this.endboss_dead.play();
                 } else {
                     this.fadeOut();
                 }
             } else if (this.energy < 100) {
                 this.playAnimation(this.IMAGES_WALKING);
-                this.endboss_sound.play();
             } else {
                 this.playAnimation(this.IMAGES_ALERT);
-                
             }
         }, 200);
         setInterval(() => {
@@ -148,6 +142,5 @@ class Endboss extends MovableObject {
         ctx.globalAlpha = 1; // Setze die Transparenz zurück, damit andere Objekte nicht betroffen sind
     }
 }
-
 
 
