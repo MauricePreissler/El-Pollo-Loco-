@@ -72,11 +72,12 @@ class Endboss extends MovableObject {
         'img/4_enemie_boss_chicken/5_dead/G25.png',
         'img/4_enemie_boss_chicken/5_dead/G26.png'
     ];
-
     world;
     isDeadAnimationComplete = false;
     alpha = 1; // Transparenzwert (1 = vollständig sichtbar, 0 = vollständig unsichtbar)
     currentImage = 0;
+    EndbossStart_sound = new Audio('./audio/EndbossStart.mp3');
+    EndbossAttack_sound = new Audio('./audio/EndbossAttack.mp3');
 
     constructor() {
         super().loadImage('./img/4_enemie_boss_chicken/2_alert/G5.png');
@@ -92,11 +93,13 @@ class Endboss extends MovableObject {
             if (this.isDead()) {
                 if (!this.isDeadAnimationComplete) {
                     this.playAnimation(this.IMAGES_BOSS_DEAD);
+                    this.EndbossAttack_sound.play();
                 } else {
                     this.fadeOut();
                 }
             } else if (this.energy < 100) {
                 this.playAnimation(this.IMAGES_WALKING);
+                this.EndbossStart_sound.play();
             } else {
                 this.playAnimation(this.IMAGES_ALERT);
             }

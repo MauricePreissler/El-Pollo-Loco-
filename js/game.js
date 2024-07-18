@@ -1,5 +1,9 @@
 let backgroundsound = new Audio('audio/background.mp3');
 backgroundsound.volume = 0.1; // Lautstärke auf 10% setzen
+let enemyTalking = new Audio('audio/enemyTalking.mp3');
+smallChicken_sound = new Audio('./audio/smallEnemy.mp3');
+
+
 let canvas;
 let world;
 let keyboard = new Keyboard();
@@ -16,6 +20,9 @@ function startGame(){
     document.getElementById('fullscreen').classList.remove('display-none');
     document.getElementById('startScreen').classList.add('display-none');
     backgroundsound.play(); 
+    enemyTalking.play(); 
+    smallChicken_sound.play();
+
     backgroundsound.addEventListener('ended', function() {
         this.currentTime = 0;
         this.play();
