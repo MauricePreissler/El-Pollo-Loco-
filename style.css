@@ -13,8 +13,6 @@ body {
     background-image: url(./img/desert.png);
     background-position: center;
     font-family: 'zabars', Arial, Helvetica, sans-serif;
-    
-    
 }
 .mainClass {
     display: flex;
@@ -59,35 +57,43 @@ canvas {
     cursor: pointer;
 }
 
+#popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgb(240, 149, 38);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
 
-
-
-.open-info-bg{
-    background: rgba(35, 36, 35, 0.3);
-    /* z-index: 1; */
+#popupBackground {
+    display: none;
     position: fixed;
     left: 0;
-    right: 0;
-    bottom: 0;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
-.open-info{
-    background-color: beige;
-    width: 720px;
-    height: 480px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+p {
+    font-size: 32px;
 }
 
-.back-image img{
-    height: 64px;
+.button-close-game-info{
+    font-family: 'zabars', Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 8px;
+    font-size: 24px;
 }
 
-.back-image img:hover{
+.button-close-game-info:hover{
     cursor: pointer;
+    background-color: rgb(66, 64, 64);
 }

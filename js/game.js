@@ -25,8 +25,6 @@ function startGame(){
     enemyTalking.play(); 
     smallChicken_sound.play();
     
-    
-
     backgroundsound.addEventListener('ended', function() {
         this.currentTime = 0;
         this.play();
@@ -63,6 +61,16 @@ function enterFullscreen(element) {
     document.getElementById('open-info-bg').classList.add('display-none');
     console.log("close")
   }
+
+  function openPopup() {
+    document.getElementById('popup').style.display = 'block';
+    document.getElementById('popupBackground').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('popupBackground').style.display = 'none';
+}
   
 window.addEventListener("keydown", (e) => {
     
